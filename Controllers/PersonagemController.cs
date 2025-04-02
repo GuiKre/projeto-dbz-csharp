@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Xablau.Data;
 using Xablau.Models;
 
@@ -26,6 +27,13 @@ namespace Xablau.Controllers
             await _appDbContext.SaveChangesAsync();
 
             return StatusCode(201, personagem);
+        }
+        [HttpGet]
+        public async Task <ActionResult <IEnumerable<Personagem>>> GetPersonagem()
+        {
+            var personagens = await _appDbContext.XablauDB.ToListAsync();
+
+            return Ok(personagens);
         }
     }
 }
