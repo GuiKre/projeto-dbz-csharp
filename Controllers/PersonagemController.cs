@@ -35,5 +35,46 @@ namespace Xablau.Controllers
 
             return Ok(personagens);
         }
+
+        [HttpGet("{id}")]
+        public async Task <ActionResult<Personagem>> GetPersonagem(int id)
+        {
+            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+
+            if (personagem == null) {
+                return NotFound("Personagem não encontrado!");
+            }
+            return Ok(personagem);
+        }
+
+        [HttpPut("{id}")]
+        public async Task <IActionResult> updatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
+        {
+            var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+
+            if (personagemExistente == null) {
+                return NotFound("Personagem não encontrado!");
+            }
+
+            _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+
+            await _appDbContext.SaveChangesAsync();
+
+            return StatusCode(201, personagemAtualizado);
+        }
+
+        [HttpDelete("id")]
+        public async Task <ActionResult> DeletePersonagem(int id)
+        {
+            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+
+            if (personagem == null) {
+                return NotFound("Personagem não encontrado!");
+            }
+
+            _appDbContext.Remove(personagem);
+
+            return Ok("Personagem mandado para a glória!");
+        }
     }
 }
