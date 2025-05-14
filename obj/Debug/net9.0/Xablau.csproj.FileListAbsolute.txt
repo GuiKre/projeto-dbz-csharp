@@ -44,3 +44,6 @@ C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\obj\Debug\net9.0\refint\Xablau
 C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\obj\Debug\net9.0\Xablau.pdb
 C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\obj\Debug\net9.0\Xablau.genruntimeconfig.cache
 C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\obj\Debug\net9.0\ref\Xablau.dll
+C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\bin\Debug\net9.0\pokedex-next\package-lock.json
+C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\bin\Debug\net9.0\pokedex-next\package.json
+C:\Users\Guilherme\TI\Projetos\projeto-dbz-csharp\bin\Debug\net9.0\pokedex-next\tsconfig.json
