@@ -16,6 +16,7 @@ export default function Navbar() {
     }}>
       <Link href="/">HOME</Link>
       <Link href="/pokemon/get">Listar</Link>
+      <Link href="/pokemon/getid">Pesquisar</Link>
       <Link href="/pokemon/post">Cadastrar</Link>
       <Link href="/pokemon/put">Editar</Link>
       <Link href="/pokemon/delete">Deletar</Link>
